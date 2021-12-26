@@ -1,9 +1,0 @@
-Docker
-
-[stage-1 2/6] COPY --from=builder /build/dist/app /usr/share/nginx/html:
-------
-error: failed to solve: error creating overlay mount to /var/lib/docker/overlay2/kd5oez14hcnlp4g0rgioy6l4q/merged: too many levels of symbolic links
-rozs@Rojeshs-MacBook-Pro app % 
-
-Solution: Reset Docker to factory default
-

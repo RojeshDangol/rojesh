@@ -1,4 +1,0 @@
-
-Create docker image 
-    docker buildx build . --platform linux/amd64
-
