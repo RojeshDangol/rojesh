@@ -1,0 +1,152 @@
+<div class="outer-container" fxFlex=80 fxLayout="row wrap" fxFlexOffset=10>
+    <div class="container" 
+        fxFlex
+        fxLayout="row wrap" 
+        fxLayoutGap="0px"
+        fxFlex.xs=100 fxFlex.gt-xs=60>
+            <div class="display" fxFlex=100>
+                <p fxFlex=100 fxLayoutAlign="center center">{{displayInput}}{{result}}</p>
+            </div>
+            <div class="error" fxFlex=100>
+                <p class="error">{{error}}</p>
+            </div>
+            <div class="buttons" fxFlex=100 fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(1)">1</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(2)">2</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(3)">3</a></div>
+                <div fxFlex=20><a class="operator" fxFlex=100 fxLayoutAlign="center center" (click)="getOperator('+')">+</a></div>
+            </div>
+            <div class="buttons" fxFlex=100 fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(4)">4</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(5)">5</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(6)">6</a></div>
+                <div fxFlex=20><a class="operator" fxFlex=100 fxLayoutAlign="center center" (click)="getOperator('-')">-</a></div>
+            </div>
+            <div class="buttons" fxFlex=100 fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(7)">7</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(9)">8</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(9)">9</a></div>
+                <div fxFlex=20><a class="operator" fxFlex=100 fxLayoutAlign="center center" (click)="getOperator('*')">*</a></div>
+            </div>
+            <div class="buttons" fxFlex=100 fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray('.')">.</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getNumArray(0)">0</a></div>
+                <div fxFlex=20><a fxFlex=100 fxLayoutAlign="center center" (click)="getResult()">=</a></div>
+                <div fxFlex=20><a class="operator" fxFlex=100 fxLayoutAlign="center center" (click)="getOperator('/')">/</a></div>
+            </div>
+            <div class="buttons" fxFlex=100 fxLayoutAlign="center center"><a class="reset" (click)="reset()">Reset</a></div>
+    </div>
+    <div class="logContainer" 
+            fxFlex=40 
+            fxLayout="column" 
+            fxLayoutAlign="center" 
+            fxdirection.xs="row wrap" 
+            fxFlex.xs=90
+            fxFlexOffset.xs=5>
+                <div fxFlex=20 fxFlex.xs=20 fxLayoutAlign="center center" class="displogs" fxLayout="row">
+                    <div fxFlex=80  fxLayoutAlign="center top">Logs</div>
+                    <div fxFlex=20  fxLayoutAlign="center top">
+                        <button class="deletebtn" mat-icon-button (click)="clearLogs()"><mat-icon>delete</mat-icon></button>
+                    </div>
+                </div>
+                <div fxFlex=80 fxLayoutAlign="left top">
+                    <mat-card fxFlex=100 class="scrollable">
+                        <mat-card-content fxFlex=100 fxLayoutAlign="start">
+                        <ul >
+                                <li *ngFor="let i of logs">{{i}}</li>
+                        </ul>
+                        </mat-card-content>
+                    </mat-card>
+                        
+                </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="outerContainer">
+    <div class="container" fxFlex fxLayout="row wrap">
+        <div class="calContainer" fxFlex.xs=100 fxFlex.gt-xs=60 fxFlexLayout="row wrap" >
+            
+            <div fxFlex=100 class="dispButton" fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="center">
+            
+                <div ><mat-card fxFLexLayoutAlign="center center" fxFlex=70 fxFlexOffset=15>{{displayInput}}{{result}}</mat-card></div>
+                <div ><p fxFlex=70 fxFlexOffset=15>{{error}}</p></div>
+               
+                <div fxFlex fxLayout="row wrap"  fxLayoutAlign="center" fxLayoutGap="5px">
+                        <div fxflex=25><a  mat-flat-button (click)="getNumArray(1)">1</a></div>
+                        <div fxflex=25><a  mat-flat-button (click)="getNumArray(2)">2</a></div>
+                        <div fxflex=25><a  mat-flat-button (click)="getNumArray(3)">3</a></div>
+                        <div fxflex=25><a  mat-flat-button (click)="getOperator('+')">+</a></div>
+                </div>
+                <div fxFlex fxLayout="row wrap"  fxLayoutAlign="center" fxLayoutGap="5px">
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(4)">4</a>
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(5)">5</a>
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(6)">6</a>
+                        <a fxflex=25 mat-flat-button (click)="getOperator('-')">-</a> 
+                </div>    
+                <div fxFlex  fxLayout="row wrap"  fxLayoutAlign="center" fxLayoutGap="5px">
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(7)">7</a>
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(8)">8</a>
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(9)">9</a>
+                        <a fxflex=25 mat-flat-button (click)="getOperator('*')">*</a>
+                </div>       
+                <div fxFlex fxLayout="row wrap"  fxLayoutAlign="center" fxLayoutGap="5px">
+                        <a fxflex=25 mat-flat-button (click)="getNumArray('.')">.</a>
+                        <a fxflex=25 mat-flat-button (click)="getNumArray(0)">0</a>
+                        <a fxflex=25 mat-flat-button (click)="getResult()">=</a>
+                        <a fxflex=25 mat-flat-button (click)="getOperator('/')">/</a>
+                </div>
+                <div fxLayout="row-wrap" fxLayoutAlign="center center">
+                        <a mat-flat-button (click)="reset()">Reset</a>
+                </div>
+            </div> 
+        </div>
+        <div fxFlex=40 class="logContainer" fxdirection.xs="row" fxFlex.xs=75 fxFlexOffset.xs=15> 
+            <div class="displogs" fxLayout="column-wrap">
+                <div class="logs" fxFlex="80%"  fxLayoutAlign="center center">Logs</div>
+                <div fxFlex="20%"  fxLayoutAlign="center right">
+                    <button class="deletebtn" mat-icon-button (click)="clearLogs()"><mat-icon>delete</mat-icon></button>
+                </div>
+            </div>
+                <div  fxLayout="column-wrap" fxLayoutAlign="left center">
+                   <mat-card fxFlex="100%">
+                       <mat-card-content fxLayoutAlign="start">
+                        <ul >
+                                <li *ngFor="let i of logs">{{i}}</li>
+                        </ul>
+                        </mat-card-content>
+                    </mat-card>
+                        
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ -->

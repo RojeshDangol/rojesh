@@ -1,0 +1,25 @@
+<div class="container" fxFlex fxLayout="column">
+    <div class="header" fxFlex=10 fxLayoutAlign="center">
+        <h1>About Me</h1>
+    </div>
+    <div class="name" fxFlex=10 fxLayoutAlign="center">
+        <h2 >{{name}}</h2>
+    </div>
+    <div class="intro" fxFlex=15 fxLayoutAlign="center">
+        <p>{{intro}}</p>
+    </div>
+    <div class="tools" fxFlex fxLayout="row wrap" fxLayoutAlign="center">
+        <div class="imageTools" *ngFor="let i of tools" fxFlex=33.33 fxLayout="row wrap" fxLayoutAlign="center">
+            <img id="image" src="{{i}}">
+        </div>
+    </div>
+    <div class="projects" fxFlex fxLayout="column" fxLayoutAlign="center">
+        <h3 fxFlex=10 fxLayoutAlign="center">Projects</h3>
+        <mat-list *ngFor="let i of projects" fxFlex>
+            <mat-list-item>{{i.title}} : {{i.description}}</mat-list-item>
+        </mat-list>
+    </div>
+    <div class="contact" fxFlex>
+
+    </div>
+</div>

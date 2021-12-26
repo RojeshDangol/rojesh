@@ -1,0 +1,259 @@
+:host-context(body) {
+    height: 100%;
+    background-color: gray; 
+    display: block;
+}
+
+.outer-container{
+    padding-top: 30px;
+    /* background-color: red; */
+
+}
+
+.container{
+    box-sizing: content-box;
+    /* background-color: pink; */
+    height: 250px;
+}
+
+.logContainer{
+    height: 250px;
+}
+
+.display{
+    background-color: purple;
+    box-sizing: content-box;
+    word-break: break-all;
+    display: inline-block;
+    min-height: 40px;
+}
+
+.buttons{
+    background-color: silver;
+    color: skyblue;
+}
+
+.logs{
+    border-color: blue;
+    background-color: blue;
+}
+
+a{
+    background-color: gray;
+    border: skyblue;
+    border-style: double;
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 5px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+p{
+    border:skyblue;
+    border-style: double;
+    background-color: gray;
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+
+.displogs{
+    /* height: 30px; */
+    background-color: gray;
+    border-style: double;
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    box-sizing: content-box;
+    word-break: break-all;
+    display: inline-block;
+}
+
+
+.reset{
+    border: skyblue;
+    border-style: double;
+    background-color: rgb(126, 70, 70);
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+
+a.operator{
+    background-color: rgb(126, 70, 70);
+    text-decoration: none;
+}
+
+a:hover{
+    background-color:rgb(59, 56, 56);
+    color: white;
+    text-shadow: 0 0 5px #b9b5b5, 0 0 5px #5d96cc;
+    text-decoration: none;
+    color: skyblue;
+    
+}
+
+p.error{
+    color: rgb(150, 69, 69);
+    font-size: 15px;
+}
+
+mat-card{
+    position: absolute;
+    max-height: 200px;
+    overflow: auto !important;
+    background-color: gray;
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 10px;
+    margin: 0px;
+}
+mat-card.scrollable{
+    border-style: double;
+    position: relative;
+    display: block;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+/* .outerContainer { */
+    /* padding-top: 30px; */
+    /* border: 1px solid #19c430;  */
+    /* box-sizing: content-box; */
+
+/* } */
+/* .container { */
+    /* background-color: rgb(173, 101, 80); */
+    /* border: 1px solid #19c430;  */
+    /* box-sizing: content-box; */
+    /* height: 400px; */
+/* } */
+
+/* .calContainer{ */
+    /* background-color: rgb(77, 86, 138); */
+    /* border: 1px solid #19c430;  */
+    /* box-sizing: content-box; */
+    /* height: 400px; */
+/* } */
+
+/* .logContainer{ */
+    /* background-color: white; */
+    /* border: 1px solid #19c430; */
+    /* box-sizing: content-box; */
+/* }  */
+
+/* ul{ */
+    /* word-break: break-all; */
+    /* display: inline-block; */
+/* } */
+  
+/* .dispCalculator{
+    box-sizing: content-box;
+    word-break: break-all;
+    display: inline-block;
+    
+}
+
+.dispButton{
+    box-sizing: content-box;
+}
+
+.mat-card{
+    background-color: gray;
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 10px;
+    margin: 0px;
+} */
+
+/* a{
+    background-color: gray;
+    font-family: 'Courier New';
+    font-size: 20px;
+    color: skyblue;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px;
+} */
+/* p{
+    background-color: rgb(49, 83, 97);
+    font-family: 'Courier New';
+    font-size: 15px;
+    color: rgb(250, 111, 111);
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 10px;
+    margin: 0px;
+} */
+
+
+
+/* .icon-size{
+    font-size: 20px;
+    text-align: right;
+}
+
+.main{
+    width: 60%;
+}
+
+.logs{
+    width: 40%;
+    float: right;
+}
+
+.calculator{
+    width: 200;
+    height: 100;
+}
+
+mat-card{
+    color: black;
+    border-left: 1px;
+}
+
+.deletebtn{
+    color: black;
+    text-align: top right;
+} */
+/* .mat-grid-tile {
+    border: solid 2px #000;
+} */

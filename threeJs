@@ -1,0 +1,124 @@
+https://www.npmjs.com/package/ngx-three
+
+
+npm i ngx-three
+npm i --save three
+npm i --save @types/three //installs type definition
+
+create canvas
+    <canvas id="canvas" style="height: 100%; width: 100%;" ></canvas>
+
+tsfile
+
+import { Component, Input, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import * as THREE from 'three';
+import { Color } from 'three';
+
+@Component({
+  selector: 'app-three',
+  templateUrl: './three.component.html',
+  styleUrls: ['./three.component.css']
+})
+export class ThreeComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('canvas')
+  private canvasRef: ElementRef ={} as ElementRef;
+
+  constructor() { }
+  ngAfterViewInit(): void {
+    this.createScene();
+    this.startRenderingLoop();
+  }
+
+  width: number = window.innerWidth;
+  height: number = window.innerHeight;
+
+  //3d properties
+  @Input() public rotationSpeedX: number = 0.01;
+  @Input() public rotationSpeedY: number = 0.01;
+
+  @Input() public size: number = 200;
+  @Input() public texture: string = "";
+
+  //stage properties
+  @Input() public cameraZ: number = 400;
+  @Input() fieldOfView: number = 1;
+  @Input('nearClipping') public nearClippingPlane: number = 1;
+  @Input('farClipping') public farClippping: number = 1000;
+
+
+  //helper properties
+  private camera!: THREE.PerspectiveCamera;
+
+  private get canvas(): HTMLCanvasElement {
+    return this.canvasRef.nativeElement;
+  }
+
+  private loader = new THREE.TextureLoader();
+  private geometry = new THREE.BoxGeometry(1, 1, 1);
+  private material = new THREE.MeshBasicMaterial(
+    {color: new Color(0x404040),
+    reflectivity: 1}
+  )
+  private cube: THREE.Mesh = new THREE.Mesh(this.geometry, this.material);
+
+  private light: THREE.Light = new THREE.PointLight(0xff0000, 1, 10);
+
+  private renderer!: THREE.WebGL1Renderer;
+
+  private scene!: THREE.Scene;
+
+  private createScene(){
+    console.log("scene")
+    
+    //scene
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0xFFFFFF);
+    this.scene.add(this.cube);
+    this.scene.add(this.light);
+
+    //camera
+    let aspectRatio = this.getAspectRatio();
+    this.camera = new THREE.PerspectiveCamera(
+      this.fieldOfView,
+      aspectRatio,
+      this.nearClippingPlane,
+      this.farClippping
+    )
+    this.camera.position.z = this.cameraZ;
+  }
+
+  private getAspectRatio(){
+    return this.width / this.height;
+  }
+
+  //animateCube
+  private animateCube(){
+    this.cube.rotation.x += this.rotationSpeedX;
+    this.cube.rotation.y += this.rotationSpeedY;
+  }
+
+  private startRenderingLoop(){
+    //Renderer
+    this.renderer = new THREE.WebGL1Renderer({canvas: this.canvas});
+    this.renderer.setPixelRatio(devicePixelRatio);
+    // this.renderer.setSize(this.canvas.width, this.canvas.height);
+    this.renderer.setSize(this.width, this.height);
+
+    let component: ThreeComponent = this;
+    (
+      function render(){
+        requestAnimationFrame(render);
+        component.animateCube();
+        component.renderer.render(component.scene, component.camera);
+      }()
+    );
+  }
+
+
+  ngOnInit(): void {
+    
+    
+  }
+
+}

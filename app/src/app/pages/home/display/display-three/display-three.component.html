@@ -1,0 +1,15 @@
+<div class="container" fxFlex fxLayout="row" fxLayoutAlign="center center">
+    
+    <div fxFlex=80  class="dispImage" fxLayoutAlign="center center">
+        <img class="image" src="{{images[this.index]}}">
+    </div>
+    
+    <div fxFlex=20 class="dispCarousel" fxLayout="column">
+        <div fxFlex=100 class="imageArray" *ngFor="let img of images; let i = index;">
+            <img  fxFlex=100 class="img" fxLayout="row" (click)="imageChange(i)" src="{{img}}">
+        </div>
+    </div>
+   
+
+</div>
+

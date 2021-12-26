@@ -1,0 +1,16 @@
+# name: rojesh
+# properties:
+#   containers:
+#   - name: app
+#     properties:
+#       image: app:latest
+#       ports: 80
+#       depends_on: server
+#   - name: server
+#     properties:
+#       image: server:latest
+#       depends_on: db
+#   - name: db
+#       image: db:latest
+
+//azure config 
