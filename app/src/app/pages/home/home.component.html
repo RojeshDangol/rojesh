@@ -1,0 +1,576 @@
+<div class="container" fxFlex fxLayout="column">
+    <div class="top" fxFlex=20>
+        <div #welcome class="city" fxFlex=100>
+
+            <h1 class="welcomeText" *ngIf="currentState" fxFlex>Welcome to my demo website</h1>
+            
+            <div id="moon"
+                 [@moon]="currentState ? 'initial' : 'final' ">
+            </div>
+        <!-- <div class="controls">
+                <span id="lineCity"
+                (click)="currentState = !currentState"
+                [@lineCity]="currentState ? 'initial' : 'final'">
+            </span>
+
+            <span id="circleCity" 
+                    (click)="currentState = !currentState"
+                    [@circleCity]="currentState ? 'initial' : 'final'">
+            </span>
+        </div> -->
+
+            <div id="building1"
+                [@building1]="currentState ? 'initial' : 'final' ">
+            <!-- top padding for light -->
+                <div class="topPad"></div>
+                <!-- lights -->
+            
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+            <!-- </div> -->
+        
+            </div>
+           
+
+            <div id="building2"
+                [@building2]="currentState ? 'initial' : 'final' ">
+            <!-- top padding for light -->
+            <div class="topPad"></div>
+                <!-- lights -->
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+            </div>
+            <div id="building3"
+            [@building3]="currentState ? 'initial' : 'final' ">
+        
+             <!-- top padding for light -->
+             <div class="topPad"></div>
+            <!-- lights -->
+        
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="lightOff">
+            </div>
+            <div class="lightOff">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="lightOff">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="lightOff">
+            </div>
+            <div class="lightOff">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="lightOff">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+            <div class="light">
+            </div>
+           
+        </div>
+        <div id="bridge"
+            [@bridge]="currentState ? 'initial' : 'final' ">
+            <div id="bridgePoleBack">
+            </div>
+            <div id="bridgePoleMiddle">
+            </div>
+            <div id="bridgePoleFront">
+            </div>
+            <div id="bridgeWireFront">
+            </div>
+            <div id="bridgeWireBack">
+            </div>
+            <div id="bridgeWireFrontSmall">
+            </div>
+            <div id="bridgeWireBackSmall">
+            </div>
+          
+        </div>
+        <div id="building4"
+        [@building4]="currentState ? 'initial' : 'final' ">
+    
+         <!-- top padding for light -->
+         <div class="topPad"></div>
+        <!-- lights -->
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="lightOff">
+        </div>
+        <div class="lightOff">
+        </div>
+        <div class="lightOff">
+        </div>
+        <div class="lightOff">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="lightOff">
+        </div>
+        <div class="light">
+        </div>
+        <div class="lightOff">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+        <div class="light">
+        </div>
+    <!-- </div> -->
+
+    </div>
+        <div id="building5"
+        [@building5]="currentState ? 'initial' : 'final' ">
+            
+         <!-- top padding for light -->
+         <div class="topPad"></div>
+        <!-- lights -->
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+            <!-- </div> -->
+
+    </div>
+
+    <div id="building6"
+        [@building6]="currentState ? 'initial' : 'final' ">
+             <!-- top padding for light -->
+             <div class="topPad"></div>
+        <!-- lights -->
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="lightOff">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+                <div class="light">
+                </div>
+            <!-- </div> -->
+
+    </div>
+
+        </div>
+    </div>
+    <div class="control-box" fxFlex=5>
+        <span id="boxCity"
+                    (click)="currentState = !currentState"
+                    [@boxCity]="currentState ? 'initial' : 'final'">
+            </span>
+    </div>
+    <div class="bottom" fxFlex=75>
+        <div class="left-bottom" fxFlex=70 fxLayout="column">
+           <!-- <div class="ball" fxFlex=20> -->
+               <span id="ball1"
+                (click)="ballState1 = !ballState1; 
+                            ballState2 = true;
+                            ballState3 = true; 
+                            ballState4 = true;    
+                            displayState1 = !displayState1;
+                            displayState2 = true;
+                            displayState3 = true;
+                            displayState4 = true;
+                            currentText(1);
+                            "
+                 [@ball1]="ballState1 ? 'initial' : 'final' ">
+               </span>
+               <div #dispOne class='display' fxFlex fxLayoutAlign="center center"
+               [@display]="displayState1 ? 'initial' : 'final' ">
+                  <app-display-one></app-display-one>
+                  <!-- <p>{{text}}</p> -->
+                 
+               </div>
+               <span id="ball2"
+               (click)="ballState2 = !ballState2;
+                            ballState1 = true;
+                            ballState3 = true; 
+                            ballState4 = true; 
+                            displayState1 = true;
+                            displayState2 = !displayState2;
+                            displayState3 = true;
+                            displayState4 = true;
+                            currentText(2);
+                            "
+                [@ball2]="ballState2 ? 'initial' : 'final' ">
+              </span>
+              <div #dispTwo class='display' fxFlex fxLayoutAlign="center center"
+               [@display]="displayState2 ? 'initial' : 'final' ">
+                    <app-display-two></app-display-two>
+                    <!-- <p>{{text}}</p> -->
+               </div>
+              <span id="ball3"
+              (click)="ballState3 = !ballState3;
+                        ballState1 = true;
+                        ballState2 = true; 
+                        ballState4 = true;
+                        displayState1 = true;
+                        displayState2 = true;
+                        displayState3 = !displayState3;
+                        displayState4 = true;
+                        currentText(3);
+                        "
+               [@ball3]="ballState3 ? 'initial' : 'final' ">
+             </span>
+             <div #dispThree class='display' fxFlex fxLayoutAlign="center center"
+             [@display]="displayState3 ? 'initial' : 'final' ">
+                <app-display-three></app-display-three>
+                <!-- <p>{{text}}</p> -->
+             </div>
+             <span id="ball4"
+             (click)="ballState4 = !ballState4;
+                        ballState1 = true;
+                        ballState2 = true; 
+                        ballState3 = true;
+                        displayState1 = true;
+                        displayState2 = true;
+                        displayState3 = true;
+                        displayState4 = !displayState4;
+                        currentText(4);
+                        "
+              [@ball4]="ballState4 ? 'initial' : 'final' ">
+            </span>
+            <div #dispFour class='display' fxFlex fxLayoutAlign="center center"
+            [@display]="displayState4 ? 'initial' : 'final' ">
+                 <app-display-four></app-display-four>
+                 <!-- <p>{{text}}</p> -->
+            </div>
+              
+           <!-- </div> -->
+        </div>
+        <div class="right-bottom" fxFlex=30 fxLayout="column">
+            <div class="top-rb" fxFlex=40>
+
+            </div>
+            <div class="bottom-rb" fxFlex=60>
+                    <th-canvas id="canvas" (onRender)="this.onBeforeRender()">
+                        <th-scene class="scene">
+                    
+                            <th-object3D class="scene"
+                                        (onClick)="routeToProfile()"
+                                        (onMouseEnter)="focus()"
+                                        (onMouseExit)="noFocus()"
+                                        [scale]="selected ? [2, 2, 2] : [1, 1, 1]"
+                                        [rotation]="rotation"
+                                        [position]="position"
+                                        loadGLTF
+                                        url="../../../../assets/3d/XhousegLTF.gltf"></th-object3D>
+                            
+                            <th-pointLight [position]="[10, 10, 10]"></th-pointLight>
+                            <th-ambientLight [color]="['#808080']"> </th-ambientLight>
+                            <th-perspectiveCamera 
+                            [args]="[75, 2, 0.1, 1000]" 
+                            [position]="[1,1,10]">
+                                <th-orbitControls>
+                                    
+                                </th-orbitControls>
+                            </th-perspectiveCamera>
+                        </th-scene>
+                    </th-canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <th-canvas id="canvas" (onRender)="this.onBeforeRender()">
+    <th-scene class="scene">
+                            <th-mesh 
+                            (onClick)="selected = !selected"
+                            (onUpdate)="doSomething($event)"
+                            [scale]="selected ? [2, 2, 2] : [1, 1, 1]"
+                            [rotation]="rotation"
+                            [position]="position">
+        <th-object3D class="scene"
+                    (onClick)="routeToProfile()"
+                    [scale]="selected ? [2, 2, 2] : [1, 1, 1]"
+                    [rotation]="rotation"
+                    [position]="position"
+                    loadGLTF
+            url="../../../../assets/3d/XhousegLTF.gltf"></th-object3D>
+                                <th-boxGeometry></th-boxGeometry>
+                                <th-meshBasicMaterial [args]="{color: 'purple'}"></th-meshBasicMaterial>
+                           
+                                </th-mesh> 
+        <th-pointLight [position]="[10, 10, 10]"></th-pointLight>
+        <th-ambientLight [color]="['#808080']"> </th-ambientLight>
+        <th-perspectiveCamera 
+        [args]="[75, 2, 0.1, 1000]" 
+        [position]="[1,1,10]">
+            <th-orbitControls></th-orbitControls>
+        </th-perspectiveCamera>
+    </th-scene>
+</th-canvas> -->

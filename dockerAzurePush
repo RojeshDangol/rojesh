@@ -1,0 +1,21 @@
+Build Images
+
+    
+    docker images //show images
+    docker tag <image> <azureRegistryLink>/<tagName>
+
+    az login
+    az acr login --name <azureRegistryName>
+
+    docker push <azureRegistryLink>/<tagName>
+
+    az acr update -n <acrName> --admin-enabled true //enable admin
+
+
+
+    docker system prune -a //to delete images
+
+
+    docker build --platform linux/amd64 -t lakhansamani/docker-demo .
+
+Enable Cors
