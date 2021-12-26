@@ -1,0 +1,83 @@
+<div
+  class="container"
+  fxFlex
+  fxLayout="column"
+  fxLayoutAlign="center top"
+  fxLayoutGap="10px"
+>
+  <div class="heading" fxFlex="20">
+    <h3>Register</h3>
+  </div>
+  <div class="form">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="registerUser(form.value)"
+      fxFlex=70
+      fxLayout="column wrap"
+      fxLayoutGap="10px"
+      fxFlexOffset=15
+    >
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input
+          #inputFirst
+          matInput
+          type="text"
+          formControlName="firstName"
+          (input)="userInputFirst(inputFirst.value.length)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input
+          #inputLast
+          matInput
+          type="text"
+          formControlName="lastName"
+          (input)="userInputLast(inputLast.value.length)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input
+          #inputUsername
+          matInput
+          type="text"
+          formControlName="username"
+          (input)="userInputUsername(inputUsername.value.length)"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          #inputPassword
+          matInput
+          type="password"
+          formControlName="password"
+          (input)="userInputPassword(inputPassword.value.length)"
+        />
+      </mat-form-field>
+
+      <button mat-stroked-button type="submit" [disabled]="checkForm()">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+<!-- Spinner -->
+<!-- <div class="container-spinner" fxFlex fxLayout="row wrap" fxLayoutAlign="center top" fxLayoutGap="10px">
+    <div class="spinner-div" fxFlexAlign="start"> -->
+<ngx-spinner
+    bdColor=""
+    size="large"
+    color="#212121"
+    type="ball-atom"
+    [fullScreen]="false">
+</ngx-spinner>
+<!-- </div> -->
+
+<!-- <div class="text-div" fxFlexAlign="end">
+        <h3 style="color: black" >You have been successfully Registered</h3>
+        <h3 style="color: black" >Redirecting to your profile...</h3>
+    </div> -->
+<!-- </div> -->

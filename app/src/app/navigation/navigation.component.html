@@ -1,0 +1,62 @@
+
+<div class="Nav" fxLayout="row" fxHide fxShow.gt-xs>
+    <div fxFlex="25" fxLayoutAlign="start center" fxFlexOffset=5>
+        <span class="rojesh">Rojesh</span>
+    </div>
+    <div class="menu" fxFlex="50" fxLayoutAlign="center">
+        <a fxFlex=20 mat-flat-button routerLink="home" routerLinkActive="active">
+            <!-- <mat-icon>home</mat-icon> -->
+            <span class="nav-caption">Home</span></a>
+        <a fxFlex=20 mat-flat-button routerLink="profile" routerLinkActive="active">
+            <!-- <mat-icon>face</mat-icon> -->
+            <span class="nav-caption">User</span></a>
+        <a fxFlex=20 mat-flat-button routerLink="projects" routerLinkActive="active">
+            <!-- <mat-icon>computer</mat-icon> -->
+            <span class="nav-caption">Apps</span></a>
+        <a fxFlex=30 mat-flat-button routerLink="about" routerLinkActive="active">
+            <!-- <mat-icon>person_pin</mat-icon> -->
+            <span class="nav-caption">About Me</span></a>
+    </div>
+    <div class="menu" fxFlex="25"fxLayoutAlign="center">
+        
+        <a mat-flat-button *ngIf="!loggedIn()" routerLink="register" routerLinkActive="active">
+            <span class="nav-caption">Register</span></a>
+        <a mat-flat-button *ngIf="!loggedIn()" routerLink="login" routerLinkActive="active">
+            <span class="nav-caption">Login</span></a>
+        <a mat-flat-button *ngIf="loggedIn()" routerLink="logout" routerLinkActive="active">
+            <span class="nav-caption">LogOut</span></a>
+        
+    </div>
+</div>
+
+
+<mat-sidenav-container>
+        <mat-sidenav fxHide fxShow.xs #sidenav mode="side">
+                <app-nav-list></app-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+                <router-outlet></router-outlet>
+        </mat-sidenav-content> 
+</mat-sidenav-container>
+
+
+<!-- <div class="Nav" fxLayout="row" fxHide fxShow.gt-xs>
+    <div fxFlex="60" fxLayoutAlign="start">
+        <a mat-flat-button routerLink="home" routerLinkActive="active">
+            <mat-icon>home</mat-icon><span class="nav-caption">Home</span></a>
+        <a mat-flat-button routerLink="profile" routerLinkActive="active">
+            <mat-icon>face</mat-icon><span class="nav-caption">Profile</span></a>
+        <a mat-flat-button routerLink="projects" routerLinkActive="active">
+            <mat-icon>computer</mat-icon><span class="nav-caption">Projects</span></a>
+    </div>
+    <div fxFlex="40"fxLayoutAlign="end">
+        
+        <a mat-flat-button *ngIf="!loggedIn()" routerLink="register" routerLinkActive="active">
+            <span class="nav-caption">Register</span></a>
+        <a mat-flat-button *ngIf="!loggedIn()" routerLink="login" routerLinkActive="active">
+            <span class="nav-caption">Login</span></a>
+        <a mat-flat-button *ngIf="loggedIn()" routerLink="logout" routerLinkActive="active">
+            <span class="nav-caption">LogOut</span></a>
+        
+    </div>
+</div> -->
